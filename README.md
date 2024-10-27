@@ -1,3 +1,5 @@
+This is a fork of the package [web_ffi](https://pub.dev/packages/web_ffi) on pub.dev, and this package uses `wasmExports` instead of the obsolete `asm`.
+
 # web_ffi
 `web_ffi` is a drop-in solution for using `dart:ffi` on the web. This enables you to work with `WebAssembly` more easily and convenient.
 

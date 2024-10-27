@@ -65,13 +65,9 @@ class Global extends WasmSymbol {
       : super(address: address, name: name);
 
   @override
-  bool operator ==(dynamic other) {
-    if (other != null && other is Global) {
-      return name == other.name && address == other.address;
-    } else {
-      return false;
-    }
-  }
+  bool operator ==(Object other) => other is Global
+    && name == other.name
+    && address == other.address;
 }
 
 /// Describes a function exported from WebAssembly.
@@ -98,15 +94,10 @@ class FunctionDescription extends WasmSymbol {
   int get hashCode => '$name$argumentCount$tableIndex'.hashCode;
 
   @override
-  bool operator ==(dynamic other) {
-    if (other != null && other is FunctionDescription) {
-      return argumentCount == other.argumentCount &&
-          name == other.name &&
-          tableIndex == other.tableIndex;
-    } else {
-      return false;
-    }
-  }
+  bool operator ==(Object other) => other is FunctionDescription
+    && argumentCount == other.argumentCount
+    && name == other.name
+    && tableIndex == other.tableIndex;
 
   @override
   String toString() =>

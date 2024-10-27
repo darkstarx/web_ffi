@@ -1,3 +1,7 @@
+## [0.7.3]
+* The `wasmExports` is used instead of the obsolete `asm`.
+* The sdk version is upgraded up to 3.0.0.
+
 ## [0.7.2]
 * Fixed errors related to unexpected `runtimeType` names due to minifying in release builds
 
